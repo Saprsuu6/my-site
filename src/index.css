@@ -69,7 +69,3 @@ button,
 button:hover {
   background-color: var(--light-theme-hover-2);
 }
-
-.skills ul li:hover {
-  background-color: var(--light-theme-hover-2);
-}

@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  color: rgb(58, 58, 58);
+  color: var(--light-theme-font-color);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.container {
+  position: relative;
+}
+
+.image_container {
+  position: absolute;
+  top: -48%;
+  left: 45%;
+  z-index: 10;
+}
+
+.image_container img {
+  width: 80px;
+  height: auto;
+}
+
+.text_container {
+  position: relative;
+  z-index: 5;
+}
+
+.logo {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  cursor: pointer;
+  padding: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+}

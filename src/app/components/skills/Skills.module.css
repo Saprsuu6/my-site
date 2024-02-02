@@ -1,0 +1,15 @@
+.skills ul {
+  margin-top: 20px;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.skills ul li {
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--light-theme-hover-transient);
+}

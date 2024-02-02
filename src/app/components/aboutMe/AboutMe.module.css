@@ -1,0 +1,70 @@
+a {
+  text-decoration: none;
+  color: var(--light-theme-font-color-side);
+  font-weight: bold;
+}
+
+.grid_container {
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid_item:first-child {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.grid_item:nth-child(2) {
+  height: 100%;
+  background: url(./../../assets/aboutimg.png) no-repeat top;
+  background-size: 100%;
+}
+
+.number_info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.number_info div {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.number_info p {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--light-theme-hover);
+}
+
+.number_info span {
+  color: var(--light-theme-font-color-side);
+}
+
+.cvs {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.cvs li {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+  background-size: 16px 16px;
+}
+
+.cvs li:nth-child(1) {
+  background-image: url(../../assets/android.png);
+}
+
+.cvs li:nth-child(2) {
+  background-image: url(../../assets/c_sharp.png);
+}
+
+.cvs li:nth-child(3) {
+  background-image: url(../../assets/JS.png);
+}
+
+.cvs li:nth-child(4) {
+  background-image: url(../../assets/html.png);
+}

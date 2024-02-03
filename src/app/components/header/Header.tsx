@@ -1,17 +1,18 @@
 import React from "react";
 import headerStyles from "./Header.module.css";
-import logo from "../../assets/logo.png";
 import "../../../index.css";
+import { useTheme } from "../hooks/useTheme";
+import ThemeToggle from "../themeToggle/ThemeToggle";
 
 const Header = () => {
+  const [setTheme] = useTheme();
+
   return (
     <header className={headerStyles.header}>
-      <div className={headerStyles.container}>
+      <div className={headerStyles.text_container}>
+        <div className={`${headerStyles.logo} logo`}>Home</div>
         <div className={headerStyles.image_container}>
-          <img src={logo} alt="Описание картинки"></img>
-        </div>
-        <div className={headerStyles.text_container}>
-          <div className={`${headerStyles.logo} logo`}>Home</div>
+          <div className={headerStyles.logo_img}></div>
         </div>
       </div>
       <nav className={`${headerStyles.navbar} navbar`}>
@@ -21,6 +22,9 @@ const Header = () => {
           <li>Services</li>
           <li>Projects</li>
           <li>Contacts</li>
+          <li>
+            <ThemeToggle setTheme={setTheme} />
+          </li>
         </ul>
       </nav>
     </header>

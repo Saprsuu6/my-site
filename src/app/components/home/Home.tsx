@@ -22,19 +22,19 @@ const Home = () => {
       <div className={homeStyles.grid_item}>
         <ul>
           <li>
-            <div className={homeStyles.linkedIn}></div>
+            <div className={`${homeStyles.linkedIn} linkedIn`}></div>
           </li>
           <li>
-            <div className={homeStyles.gitHub}></div>
+            <div className={`${homeStyles.gitHub} github`}></div>
           </li>
           <li>
-            <div className={homeStyles.instagram}></div>
+            <div className={`${homeStyles.instagram} instagram`}></div>
           </li>
           <li>
-            <div className={homeStyles.telegram}></div>
+            <div className={`${homeStyles.telegram} telegram`}></div>
           </li>
           <li>
-            <div className={homeStyles.gmail}></div>
+            <div className={`${homeStyles.gmail} gmail`}></div>
           </li>
         </ul>
       </div>

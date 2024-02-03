@@ -1,5 +1,4 @@
 import React from "react";
-
 import aboutMeStyles from "./AboutMe.module.css";
 import "../../../index.css";
 

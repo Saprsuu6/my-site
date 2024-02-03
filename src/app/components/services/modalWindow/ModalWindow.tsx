@@ -15,7 +15,9 @@ const ModalWindow: React.FC<Props> = ({
   setIsClose,
 }) => {
   const close = {
-    display: isClose ? "none" : "block",
+    display: isClose ? "none" : "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
   return (

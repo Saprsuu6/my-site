@@ -79,13 +79,15 @@ button {
 
 .logo,
 .navbar li,
-a {
+a,
+.card p:nth-child(3) {
   transition: color 0.3s ease;
 }
 
 .logo:hover,
 .navbar li:hover,
-a:hover {
+a:hover,
+.card p:nth-child(3):hover {
   color: var(--theme-hover);
 }
 

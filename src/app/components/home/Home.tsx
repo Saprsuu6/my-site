@@ -70,7 +70,8 @@ const Home = () => {
           </svg>
         </div>
         <a href="#about" className={homeStyles.home_scroll_button_down}>
-          <img src={arrowDown} alt="arrow down" />
+          <div className={homeStyles.arrowDown} />
+          {/* <img src={arrowDown} alt="arrow down" /> */}
           <span>Scroll down</span>
         </a>
       </div>

@@ -1,44 +1,87 @@
-import React, { useState } from "react";
+import React from "react";
 import RegionHeader from "../regionHeader/RegionHeader";
 import servicesStyles from "./Services.module.css";
+import ModalWindow from "./modalWindow/ModalWindow";
 
 const Services = () => {
-  const [modal, seModal] = useState(false);
+  const modalWindow = React.useRef(null);
+  const [modalInfo, setModalInfo] = React.useState<number>();
+  const [isClose, setIsClose] = React.useState(true);
+
+  const modalWindowContext = [
+    {
+      title: "Frontend development",
+      services: [
+        "Responsive Web Design",
+        "Interactive User Interfaces",
+        "SEO-Friendly Implementations",
+        "Accessibility and UX Enhancement",
+      ],
+    },
+    {
+      title: "Backend development",
+      services: [
+        "Development and support of server logic applications",
+        "Working with databases",
+        "Ensuring application security",
+        "Performance optimization",
+      ],
+    },
+    {
+      title: "Musician",
+      services: ["Everything related to music"],
+    },
+  ];
 
   return (
     <div>
       <RegionHeader title="Services" subTitle="What I offer" />
       <div className={servicesStyles.cardContainer}>
-        <div className={servicesStyles.card}>
+        <div className={`${servicesStyles.card} card`}>
           <div className={servicesStyles.front_end}></div>
-          <p className={servicesStyles.cardText}>
-            Frontend development
-            <br />
-            Ui/Ux
+          <p className={servicesStyles.cardText}>Frontend development</p>
+          <p
+            onClick={() => {
+              setIsClose(false);
+              setModalInfo(0);
+            }}
+          >
+            Read more
           </p>
-          <span>Read more</span>
         </div>
-        <div className={servicesStyles.card}>
+        <div className={`${servicesStyles.card} card`}>
           <div className={servicesStyles.back_end}></div>
-          <p className={servicesStyles.cardText}>
-            Backend development
-            <br />
-            API
+          <p className={servicesStyles.cardText}>Backend development</p>
+          <p
+            onClick={() => {
+              setIsClose(false);
+              setModalInfo(1);
+            }}
+          >
+            Read more
           </p>
-          <span>Read more</span>
         </div>
-        <div className={servicesStyles.card}>
+        <div className={`${servicesStyles.card} card`}>
           <div className={servicesStyles.musician}></div>
-          <p className={servicesStyles.cardText}>Also musician services</p>
-          <span>Read more</span>
+          <p className={servicesStyles.cardText}>Musician</p>
+          <p
+            onClick={() => {
+              setIsClose(false);
+              setModalInfo(2);
+            }}
+          >
+            Read more
+          </p>
         </div>
       </div>
-      {/* <div id="myModal" className="modal">
-        <div className="modal-content">
-          <span className="close">&times;</span>
-          <p>Это модальное окно!</p>
-        </div>
-      </div> */}
+      {modalInfo !== undefined && (
+        <ModalWindow
+          header={modalWindowContext[modalInfo].title}
+          context={modalWindowContext[modalInfo].services}
+          isClose={isClose}
+          setIsClose={setIsClose}
+        />
+      )}
     </div>
   );
 };

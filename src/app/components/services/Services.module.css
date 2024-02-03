@@ -6,7 +6,6 @@
 
 .card {
   flex: 1;
-  position: relative;
   margin: 0 10px;
   padding: 30px;
   background-color: transparent;
@@ -17,19 +16,13 @@
 .card p:nth-child(2) {
   color: var(--theme-font-color);
   font-weight: bold;
-  height: 70px;
+  height: 50px;
 }
 
-.card span {
-  margin-bottom: 10px;
+.card p:nth-child(3) {
+  cursor: pointer;
   color: var(--theme-font-color);
-  font-weight: bold;
-  position: absolute;
-  bottom: 0;
-}
-
-.card span:hover {
-  /* TODO add */
+  font-style: italic;
 }
 
 .cardText {

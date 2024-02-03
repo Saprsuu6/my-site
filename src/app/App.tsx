@@ -5,6 +5,7 @@ import appStyles from "./App.module.css";
 import AboutMe from "./components/aboutMe/AboutMe";
 import Skills from "./components/skills/Skills";
 import Footer from "./components/footer/Footer";
+import Services from "./components/services/Services";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Home />
         <AboutMe />
         <Skills />
+        <Services />
       </main>
       <Footer />
     </div>

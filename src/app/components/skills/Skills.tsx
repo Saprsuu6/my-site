@@ -1,6 +1,7 @@
 import React from "react";
 import skillsStyles from "./Skills.module.css";
 import "../../../index.css";
+import RegionHeader from "../regionHeader/RegionHeader";
 
 const Skills = () => {
   const hexOpacity80Percent = "80";
@@ -45,8 +46,7 @@ const Skills = () => {
 
   return (
     <div style={marginBottom}>
-      <h2>Skills</h2>
-      <h4>My Technical Skills</h4>
+      <RegionHeader title="Skills" subTitle="My Technical Skills" />
       <div className={`${skillsStyles.skills} skills`}>
         <ul>
           {items.map((item, index) => (

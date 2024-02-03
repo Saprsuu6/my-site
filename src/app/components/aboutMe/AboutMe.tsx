@@ -1,13 +1,13 @@
 import React from "react";
 import aboutMeStyles from "./AboutMe.module.css";
 import "../../../index.css";
+import RegionHeader from "../regionHeader/RegionHeader";
 
 const AboutMe = () => {
   return (
     <div className={`${aboutMeStyles.grid_container} grid_container`}>
       <div className={aboutMeStyles.grid_item}>
-        <h2>About Me</h2>
-        <h4>My Introduction</h4>
+        <RegionHeader title="About Me" subTitle="My Introduction" />
       </div>
       <div className={aboutMeStyles.grid_item}></div>
       <div className={aboutMeStyles.grid_item}>

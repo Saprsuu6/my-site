@@ -1,0 +1,13 @@
+.portfolio_item {
+  display: flex;
+  width: 100%;
+}
+
+.portfolio_item > div:first-child {
+  height: 350px;
+  flex: 1;
+}
+
+/* .portfolio_item > div:nth-child(2) {
+  flex: 1;
+} */

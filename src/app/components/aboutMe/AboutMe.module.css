@@ -21,10 +21,6 @@ a {
   background-size: 100%;
 }
 
-.grid_item p {
-  color: var(--theme-font-color);
-}
-
 .number_info {
   display: flex;
   justify-content: space-around;

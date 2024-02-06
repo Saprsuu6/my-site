@@ -46,13 +46,13 @@ body {
 }
 
 h1,
-h2 {
+h2,
+p {
   color: var(--theme-font-color);
 }
 
 h3,
-h4,
-p {
+h4 {
   color: var(--theme-font-color-side);
 }
 
@@ -126,5 +126,40 @@ button:hover {
   60%,
   80% {
     transform: rotate(20deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards; /* Анимация продолжительностью 2 секунды */
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards; /* Анимация продолжительностью 2 секунды */
+}
+
+/* Анимация появления */
+@keyframes fadeOut {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-1000px);
+  }
+}
+
+/* Анимация исчезновения */
+@keyframes fadeIn {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }

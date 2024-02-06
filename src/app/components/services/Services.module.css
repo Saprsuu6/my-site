@@ -14,14 +14,12 @@
 }
 
 .card p:nth-child(2) {
-  color: var(--theme-font-color);
   font-weight: bold;
   height: 50px;
 }
 
 .card p:nth-child(3) {
   cursor: pointer;
-  color: var(--theme-font-color);
   font-style: italic;
 }
 

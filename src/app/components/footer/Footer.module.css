@@ -1,12 +1,12 @@
-p {
-  color: var(--theme-footer-text);
-}
-
 .footer {
   background: var(--theme-footer);
   color: var(--theme-footer-text);
   padding: 20px 0;
   text-align: center;
+}
+
+.footer p {
+  color: var(--theme-footer-text);
 }
 
 .footer ul {

@@ -18,10 +18,10 @@ const PortfolioItem: React.FC<Props> = ({ backImg, header, text }) => {
   return (
     <div className={portfolioItemStyles.portfolio_item}>
       <div style={image} />
-      {/* <div>
+      <div className={portfolioItemStyles.info}>
         <h3>{header}</h3>
         <p>{text}</p>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -18,7 +18,7 @@ const Home = () => {
   };
 
   return (
-    <div className={`${homeStyles.grid_container} grid_container`}>
+    <div id="home" className={`${homeStyles.grid_container} grid_container`}>
       <div className={homeStyles.grid_item}>
         <ul>
           <li>
@@ -69,9 +69,8 @@ const Home = () => {
             </g>
           </svg>
         </div>
-        <a href="#about" className={homeStyles.home_scroll_button_down}>
+        <a href="#aboutMe" className={homeStyles.home_scroll_button_down}>
           <div className={homeStyles.arrowDown} />
-          {/* <img src={arrowDown} alt="arrow down" /> */}
           <span>Scroll down</span>
         </a>
       </div>

@@ -34,7 +34,7 @@ const Services = () => {
   ];
 
   return (
-    <div>
+    <div id="services">
       <RegionHeader title="Services" subTitle="What I offer" />
       <div className={servicesStyles.cardContainer}>
         <div className={`${servicesStyles.card} card`}>

@@ -29,7 +29,7 @@ const Propjects = () => {
     {
       img: monopoly,
       header: "Monopoly",
-      text: "This is a famous board game invented in the early 20th century that has become one of the most popular and best-selling family entertainment in the world. The game simulates economic activity, where players move around the playing field, buying, selling and renting real estate, aiming to monopolize the market and bankrupt their rivals.",
+      text: "This is a famous board game invented in the early 20th century that has become one of the most popular and best-selling family entertainment in the world. The game simulates economic activity, where players move around the playing field, buying, selling and renting real estate, aiming to monopolize the market and bankrupt their rivals.This is a famous board game invented in the early 20th century that has become one of the most popular and best-selling family entertainment in the world. The game simulates economic activity, where players move around the playing field, buying, selling and renting real estate, aiming to monopolize the market and bankrupt their rivals.",
     },
     {
       img: wallets,
@@ -71,8 +71,8 @@ const Propjects = () => {
   };
 
   return (
-    <div>
-      <RegionHeader title="Services" subTitle="What I offer" />
+    <div id="projects">
+      <RegionHeader title="Portfolio" subTitle="Most recent work" />
       <div className={projectStyles.carousel}>
         <div className={projectStyles.slides}>
           <div ref={slide} className={projectStyles.slide}>
@@ -87,33 +87,58 @@ const Propjects = () => {
         <div className={projectStyles.navigation}>
           <input
             type="radio"
+            id="radio1"
             checked={currentIndex === 0}
             onChange={() => toggleSlide(goToCurrent, 0)}
             name="slides"
           />
+          <label
+            htmlFor="radio1"
+            className={projectStyles.radio_custom_label}
+          />
           <input
             type="radio"
+            id="radio2"
             checked={currentIndex === 1}
             onChange={() => toggleSlide(goToCurrent, 1)}
             name="slides"
           />
+          <label
+            htmlFor="radio2"
+            className={projectStyles.radio_custom_label}
+          />
           <input
             type="radio"
+            id="radio3"
             checked={currentIndex === 2}
             onChange={() => toggleSlide(goToCurrent, 2)}
             name="slides"
           />
+          <label
+            htmlFor="radio3"
+            className={projectStyles.radio_custom_label}
+          />
           <input
             type="radio"
+            id="radio4"
             checked={currentIndex === 3}
             onChange={() => toggleSlide(goToCurrent, 3)}
             name="slides"
           />
+          <label
+            htmlFor="radio4"
+            className={projectStyles.radio_custom_label}
+          />
           <input
             type="radio"
+            id="radio5"
             checked={currentIndex === 4}
             onChange={() => toggleSlide(goToCurrent, 4)}
             name="slides"
+          />
+          <label
+            htmlFor="radio4"
+            className={projectStyles.radio_custom_label}
           />
         </div>
 

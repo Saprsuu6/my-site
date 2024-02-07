@@ -45,7 +45,7 @@ const Skills = () => {
   };
 
   return (
-    <div style={marginBottom}>
+    <div id="skills" style={marginBottom}>
       <RegionHeader title="Skills" subTitle="My Technical Skills" />
       <div className={`${skillsStyles.skills} skills`}>
         <ul>

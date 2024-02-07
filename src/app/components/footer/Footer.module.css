@@ -3,6 +3,11 @@
   color: var(--theme-footer-text);
   padding: 20px 0;
   text-align: center;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: var(--theme-footer-text);
 }
 
 .footer p {

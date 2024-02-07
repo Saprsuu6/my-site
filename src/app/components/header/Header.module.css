@@ -4,8 +4,12 @@
   align-items: center;
   padding: 20px 10%;
   background: var(--theme-header);
-  color: var(--theme-font-color);
+  /* color: var(--theme-font-color); */
   margin-bottom: 50px;
+}
+
+.header a {
+  color: var(--theme-font-color);
 }
 
 .text_container {

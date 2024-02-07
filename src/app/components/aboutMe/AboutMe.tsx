@@ -5,7 +5,10 @@ import RegionHeader from "../regionHeader/RegionHeader";
 
 const AboutMe = () => {
   return (
-    <div className={`${aboutMeStyles.grid_container} grid_container`}>
+    <div
+      id="aboutMe"
+      className={`${aboutMeStyles.grid_container} grid_container`}
+    >
       <div className={aboutMeStyles.grid_item}>
         <RegionHeader title="About Me" subTitle="My Introduction" />
       </div>

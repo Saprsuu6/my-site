@@ -19,11 +19,15 @@ const Footer = () => {
         </p>
       </div>
       <ul>
-        <li>Skills</li>
-        <li>Qualification</li>
-        <li>Services</li>
-        <li>Portfolio</li>
-        <li>Contacts</li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
       </ul>
       <div className={footerStyles.text_container}>
         <p>By Andry Sapryhin - React</p>

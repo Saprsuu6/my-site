@@ -7,6 +7,7 @@ import Skills from "./components/skills/Skills";
 import Footer from "./components/footer/Footer";
 import Services from "./components/services/Services";
 import Propjects from "./components/projects/Propjects";
+import NewPropject from "./components/newProject/NewPropject";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Skills />
         <Services />
         <Propjects />
+        <NewPropject />
       </main>
       <Footer />
     </div>

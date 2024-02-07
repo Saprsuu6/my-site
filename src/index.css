@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 html[data-theme="light"] {
   --theme-header: linear-gradient(
     to right,
@@ -45,6 +49,10 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 h2,
 p {
@@ -84,8 +92,8 @@ a,
   transition: color 0.3s ease;
 }
 
-.logo:hover,
-.navbar li:hover,
+.logo a:hover,
+.navbar li a:hover,
 a:hover,
 .card p:nth-child(3):hover {
   color: var(--theme-hover);
@@ -105,7 +113,8 @@ button:hover {
 .instagram:hover,
 .telegram:hover,
 .gmail:hover,
-.logo_img:hover {
+.logo_img:hover,
+.hireMe:hover {
   animation: shake 1s ease-in-out 1;
 }
 
@@ -130,14 +139,13 @@ button:hover {
 }
 
 .fade-in {
-  animation: fadeIn 1s forwards; /* Анимация продолжительностью 2 секунды */
+  animation: fadeIn 1s forwards;
 }
 
 .fade-out {
-  animation: fadeOut 1s forwards; /* Анимация продолжительностью 2 секунды */
+  animation: fadeOut 1s forwards;
 }
 
-/* Анимация появления */
 @keyframes fadeOut {
   0% {
     transform: translateX(0);
@@ -151,7 +159,6 @@ button:hover {
   }
 }
 
-/* Анимация исчезновения */
 @keyframes fadeIn {
   0% {
     transform: translateX(1000px);
@@ -162,4 +169,22 @@ button:hover {
   100% {
     transform: translateX(0px);
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-hover);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-hover-2);
 }

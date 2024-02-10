@@ -1,7 +1,8 @@
 import React from "react";
-import headerStyles from "./Header.module.css";
-import "../../../index.css";
 import { useTheme } from "../hooks/useTheme";
+
+import "../../../index.css";
+import headerStyles from "./Header.module.scss";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 
 const Header = () => {
@@ -10,6 +11,7 @@ const Header = () => {
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.text_container}>
+        <div className={headerStyles.menu} />
         <div className={`${headerStyles.logo} logo`}>
           <a href="#home">Home</a>
         </div>

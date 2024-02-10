@@ -11,7 +11,7 @@ import NewPropject from "./components/newProject/NewPropject";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <main className={appStyles.main}>
         <Home />

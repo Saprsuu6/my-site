@@ -1,0 +1,130 @@
+@import "../../mediaQueries.scss";
+
+@include respond-to-display-screen-normal_big_bigger() {
+  a {
+    font-size: 1.5em;
+  }
+
+  li {
+    a {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@include respond-to-display-tablet() {
+  a {
+    font-size: 1em;
+  }
+
+  li {
+    a {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: var(--theme-header);
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+
+  @include respond-to-display-screen-normal_big_bigger() {
+    padding: 20px 10%;
+    height: 85px;
+  }
+
+  @include respond-to-display-tablet() {
+    height: 55px;
+  }
+
+  @include respond-to-display-mobile-big() {
+    padding: 20px 15px;
+    display: flex;
+  }
+}
+
+.header a {
+  color: var(--theme-font-color);
+}
+
+.text_container {
+  z-index: 5;
+}
+
+.text_container p {
+  color: var(--theme-font-color);
+}
+
+.image_container {
+  position: absolute;
+  top: 5px;
+  left: 5%;
+  z-index: 10;
+}
+
+.logo {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+
+  @include respond-to-display-screen-normal_big_bigger() {
+    display: flex;
+  }
+
+  @include respond-to-display-mobile-big() {
+    display: none;
+  }
+}
+
+.navbar ul {
+  list-style: none;
+
+  @include respond-to-display-screen-normal_big_bigger() {
+    display: flex;
+  }
+
+  @include respond-to-display-mobile-big() {
+    display: none;
+  }
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo_img {
+  background: url(../../assets/logo.png) no-repeat 15px 10px / cover;
+  width: 80px;
+  height: 80px;
+
+  @include respond-to-display-screen-normal_big_bigger() {
+    display: flex;
+  }
+
+  @include respond-to-display-tablet() {
+    display: none;
+  }
+}
+
+.menu {
+  background: url(../../assets/menu.png) no-repeat center / cover;
+  width: 30px;
+  height: 30px;
+
+  @include respond-to-display-screen-normal_big_bigger() {
+    display: none;
+  }
+
+  @include respond-to-display-mobile-big() {
+    display: flex;
+  }
+}

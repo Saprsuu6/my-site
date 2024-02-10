@@ -1,8 +1,8 @@
 import React from "react";
 import homeStyles from "./Home.module.css";
 import logo from "../../assets/logo.png";
-import arrowDown from "../../assets/arrow_down.png";
 import "../../../index.css";
+import socialLinks from "../../assets/socialLinks.json";
 
 const Home = () => {
   const h1 = {
@@ -22,19 +22,49 @@ const Home = () => {
       <div className={homeStyles.grid_item}>
         <ul>
           <li>
-            <div className={`${homeStyles.linkedIn} linkedIn`}></div>
+            <a
+              href={socialLinks.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${homeStyles.linkedIn} linkedIn`} />
+            </a>
           </li>
           <li>
-            <div className={`${homeStyles.gitHub} github`}></div>
+            <a
+              href={socialLinks.gitHub}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${homeStyles.gitHub} github`} />
+            </a>
           </li>
           <li>
-            <div className={`${homeStyles.instagram} instagram`}></div>
+            <a
+              href={socialLinks.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${homeStyles.instagram} instagram`} />
+            </a>
           </li>
           <li>
-            <div className={`${homeStyles.telegram} telegram`}></div>
+            <a
+              href={socialLinks.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${homeStyles.telegram} telegram`} />
+            </a>
           </li>
           <li>
-            <div className={`${homeStyles.gmail} gmail`}></div>
+            <a
+              href={`mailto:${socialLinks.gmail}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${homeStyles.gmail} gmail`} />
+            </a>
           </li>
         </ul>
       </div>
@@ -81,7 +111,13 @@ const Home = () => {
           Passionate frontend and bacend developer specializing in
           pixel-architecture-perfect design.
         </p>
-        <button>Contact Me</button>
+        <a
+          href={socialLinks.telegram}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button>Contact Me</button>
+        </a>
       </div>
     </div>
   );

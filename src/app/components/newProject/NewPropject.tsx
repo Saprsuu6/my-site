@@ -1,6 +1,6 @@
 import React from "react";
-import newProjectStyle from "./NewProjectStyle.module.css";
-import "../../../index.css";
+import newProjectStyle from "./NewProjectStyle.module.scss";
+import "../../../index.scss";
 import socialLinks from "../../assets/socialLinks.json";
 
 const NewPropject = () => {

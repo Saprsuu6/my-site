@@ -1,6 +1,6 @@
 import React from "react";
 import skillsStyles from "./Skills.module.css";
-import "../../../index.css";
+import "../../../index.scss";
 import RegionHeader from "../regionHeader/RegionHeader";
 
 const Skills = () => {
@@ -40,12 +40,8 @@ const Skills = () => {
     "Linux",
   ];
 
-  const marginBottom = {
-    marginBottom: "30px",
-  };
-
   return (
-    <div id="skills" style={marginBottom}>
+    <div id="skills">
       <RegionHeader title="Skills" subTitle="My Technical Skills" />
       <div className={`${skillsStyles.skills} skills`}>
         <ul>

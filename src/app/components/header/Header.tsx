@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "../hooks/useTheme";
 
-import "../../../index.css";
+import "../../../index.scss";
 import headerStyles from "./Header.module.scss";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 

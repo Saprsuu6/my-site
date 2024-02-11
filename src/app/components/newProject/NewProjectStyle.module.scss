@@ -1,3 +1,5 @@
+@import "../../mediaQueries.scss";
+
 .container {
   display: flex;
   width: 70%;
@@ -6,6 +8,12 @@
   background: var(--theme-hover-2);
   border-radius: 10px;
   align-items: center;
+
+  @include respond-to-display-mobile-mini() {
+    border-radius: 0;
+    width: 100%;
+    box-shadow: none;
+  }
 }
 
 .container > div:first-child {

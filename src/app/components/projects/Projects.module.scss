@@ -1,11 +1,19 @@
+@import "../../mediaQueries.scss";
+
 .carousel {
   position: relative;
   width: 100%;
   max-width: 600px;
-  margin: 20px auto 50px auto;
+  margin: 20px auto 0 auto;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
+
+  @include respond-to-display-mobile-mini() {
+    border-radius: 0;
+    margin: 20px 0 0 0;
+    box-shadow: none;
+  }
 }
 
 .slides {
@@ -44,7 +52,8 @@ button.next {
 
 .slides:hover ~ button.next,
 button.next:hover {
-  right: 310px;
+  right: 50%;
+  margin-right: 10px;
 }
 
 button.prev:hover,

@@ -1,6 +1,6 @@
 import React from "react";
 import RegionHeader from "../regionHeader/RegionHeader";
-import servicesStyles from "./Services.module.css";
+import servicesStyles from "./Services.module.scss";
 import ModalWindow from "./modalWindow/ModalWindow";
 
 const Services = () => {

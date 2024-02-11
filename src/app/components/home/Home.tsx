@@ -1,7 +1,7 @@
 import React from "react";
 import homeStyles from "./Home.module.scss";
 import logo from "../../assets/logo.png";
-import "../../../index.css";
+import "../../../index.scss";
 import socialLinks from "../../assets/socialLinks.json";
 
 const Home = () => {

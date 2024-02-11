@@ -1,3 +1,5 @@
+@import "../../../mediaQueries.scss";
+
 .modal {
   position: fixed;
   z-index: 5;
@@ -17,6 +19,15 @@
   padding: 20px;
   border-radius: 10px;
   width: 30%;
+
+  @include respond-to-display-mobile-big() {
+    width: 50%;
+  }
+
+  @include respond-to-display-mobile-mormal() {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 .modal_content ul {
@@ -39,6 +50,11 @@
   width: 30px;
   height: 30px;
   background: url(../../../assets/сross_mark.png) no-repeat center / cover;
+
+  @include respond-to-display-mobile-mormal() {
+    right: 10px;
+    top: 10px;
+  }
 }
 
 .close:hover,

@@ -38,7 +38,6 @@
   justify-content: space-between;
   background: var(--theme-header);
   align-items: center;
-  margin-bottom: 50px;
   width: 100%;
 
   @include respond-to-display-screen-normal_big_bigger() {
@@ -100,10 +99,12 @@
   @include respond-to-display-mobile-big() {
     .invisible {
       transform: translateY(-100px);
+      z-index: 2;
     }
 
     .visible {
       transform: translateY(0px);
+      z-index: 2;
     }
   }
 
@@ -121,7 +122,7 @@
       position: absolute;
       left: 0;
       bottom: -40px;
-      background-color: transparent;
+      backdrop-filter: blur(10px);
       width: 100%;
     }
   }
@@ -140,7 +141,6 @@
 
       flex-direction: column;
       bottom: -225px;
-      backdrop-filter: blur(10px);
     }
   }
 }

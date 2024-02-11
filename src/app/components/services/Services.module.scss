@@ -1,8 +1,14 @@
+@import "../../mediaQueries.scss";
+
 .cardContainer {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0 0 0;
+
+  @include respond-to-display-mobile-mini() {
+    flex-direction: column;
+  }
 }
 
 .card {
@@ -12,6 +18,13 @@
   background-color: transparent;
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
+
+  @include respond-to-display-mobile-mini() {
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    background: var(--theme-header);
+  }
 }
 
 .card p:nth-child(2) {

@@ -1,7 +1,9 @@
 import React from "react";
-import aboutMeStyles from "./AboutMe.module.css";
-import "../../../index.css";
 import RegionHeader from "../regionHeader/RegionHeader";
+
+import aboutMeStyles from "./AboutMe.module.scss";
+import "../../../index.scss";
+import socialLinks from "../../assets/socialLinks.json";
 
 const AboutMe = () => {
   return (
@@ -37,18 +39,42 @@ const AboutMe = () => {
             <span>Companies worked</span>
           </div>
         </div>
-        <ul className={aboutMeStyles.cvs}>
+        <ul className={`${aboutMeStyles.cvs} cvs`}>
           <li>
-            <a href="#">Android Developer CV</a>
+            <a
+              href={socialLinks.android_developer}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Android Developer CV
+            </a>
           </li>
           <li>
-            <a href="#">.NET Developer CV</a>
+            <a
+              href={socialLinks.net_developer}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NET Developer CV
+            </a>
           </li>
           <li>
-            <a href="#">NodeJs Developer CV</a>
+            <a
+              href={socialLinks.nodeJs_developer}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NodeJs Developer CV
+            </a>
           </li>
           <li>
-            <a href="#">FrontEnd Developer CV</a>
+            <a
+              href={socialLinks.frontEnd_web}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FrontEnd Developer CV
+            </a>
           </li>
         </ul>
       </div>

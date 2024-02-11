@@ -1,13 +1,13 @@
 import React from "react";
 import RegionHeader from "../regionHeader/RegionHeader";
-import projectStyles from "./Projects.module.css";
+import projectStyles from "./Projects.module.scss";
 import PortfolioItem from "./portfolioItem/PortfolioItem";
 import calculatorOfCalories from "../../assets/portfolio/calculator_of_calories.jpg";
 import gallow from "../../assets/portfolio/gallow.png";
 import instagram from "../../assets/portfolio/instagram.jpg";
 import monopoly from "../../assets/portfolio/monopoly.png";
 import wallets from "../../assets/portfolio/wallets.jpg";
-import "../../../index.css";
+import "../../../index.scss";
 
 const Propjects = () => {
   const portfolio = [
@@ -40,6 +40,34 @@ const Propjects = () => {
 
   const slide = React.useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  const [startX, setStartX] = React.useState(0);
+  const [swiping, setSwiping] = React.useState(false);
+
+  const handleTouchStart = (e: TouchEvent) => {
+    const touch = e.touches[0];
+    setStartX(touch.clientX);
+    setSwiping(false);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (e.touches && e.touches.length === 1) {
+      setSwiping(true);
+    }
+  };
+
+  const handleTouchEnd = (e: TouchEvent) => {
+    const touch = e.changedTouches[0];
+    const endX = touch.clientX;
+
+    if (swiping) {
+      if (startX - endX > 50) {
+        console.log("Swipe Left");
+      } else if (endX - startX > 50) {
+        console.log("Swipe Right");
+      }
+    }
+  };
 
   const goToPrevious = () => {
     const isFirstImage = currentIndex === 0;
@@ -74,7 +102,13 @@ const Propjects = () => {
     <div id="projects">
       <RegionHeader title="Portfolio" subTitle="Most recent work" />
       <div className={projectStyles.carousel}>
-        <div className={projectStyles.slides}>
+        <div
+          className={projectStyles.slides}
+          onTouchStart={() => handleTouchStart}
+          onTouchMove={() => handleTouchMove}
+          onTouchEnd={() => handleTouchEnd}
+          // TODO swipe
+        >
           <div ref={slide} className={projectStyles.slide}>
             <PortfolioItem
               backImg={portfolio[currentIndex].img}

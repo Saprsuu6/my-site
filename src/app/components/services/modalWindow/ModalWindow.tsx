@@ -1,5 +1,5 @@
 import React from "react";
-import modalWindowStyles from "./ModalWindow.module.css";
+import modalWindowStyles from "./ModalWindow.module.scss";
 
 interface Props {
   header: string;

@@ -8,10 +8,15 @@ import ThemeToggle from "../themeToggle/ThemeToggle";
 const Header = () => {
   const [setTheme] = useTheme();
 
+  const [isVisibleDropMenu, setIsVisibleDropMenu] = React.useState(false);
+
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.text_container}>
-        <div className={headerStyles.menu} />
+        <div
+          className={headerStyles.menu}
+          onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
+        />
         <div className={`${headerStyles.logo} logo`}>
           <a href="#home">Home</a>
         </div>
@@ -20,21 +25,50 @@ const Header = () => {
         </div>
       </div>
       <nav className={`${headerStyles.navbar} navbar`}>
-        <ul>
+        <ul
+          className={
+            isVisibleDropMenu ? headerStyles.visible : headerStyles.invisible
+          }
+        >
           <li>
-            <a href="#aboutMe">About</a>
+            <a
+              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
+              href="#aboutMe"
+            >
+              About
+            </a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a
+              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
+              href="#skills"
+            >
+              Skills
+            </a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a
+              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
+              href="#services"
+            >
+              Services
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a
+              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
+              href="#projects"
+            >
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#hireMe">Hire me</a>
+            <a
+              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
+              href="#hireMe"
+            >
+              Hire me
+            </a>
           </li>
           <li>
             <ThemeToggle setTheme={setTheme} />

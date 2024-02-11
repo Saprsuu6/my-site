@@ -1,5 +1,16 @@
-.grid_container {
-  grid-template-columns: 1fr 2fr 2fr;
+@import "../../mediaQueries.scss";
+
+@include respond-to-display-screen-normal_big_bigger() {
+  .grid_container {
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+}
+
+@include respond-to-display-tablet() {
+  .grid_container {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 .blob {

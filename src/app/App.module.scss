@@ -1,0 +1,19 @@
+@import "./mediaQueries.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@include respond-to-display-screen-normal_big_bigger() {
+  main {
+    padding: 0 15%;
+  }
+}
+
+@include respond-to-display-mobile-big() {
+  main {
+    padding: 0 2%;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import homeStyles from "./Home.module.css";
+import homeStyles from "./Home.module.scss";
 import logo from "../../assets/logo.png";
 import "../../../index.css";
 import socialLinks from "../../assets/socialLinks.json";

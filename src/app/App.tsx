@@ -10,6 +10,10 @@ import Propjects from "./components/projects/Propjects";
 import NewPropject from "./components/newProject/NewPropject";
 
 function App() {
+  React.useEffect(() => {
+    document.title = "SaprLand";
+  }, []);
+
   return (
     <div>
       <Header />

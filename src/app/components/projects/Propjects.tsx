@@ -3,9 +3,9 @@ import RegionHeader from "../regionHeader/RegionHeader";
 import projectStyles from "./Projects.module.scss";
 import PortfolioItem from "./portfolioItem/PortfolioItem";
 import calculatorOfCalories from "../../assets/portfolio/calculator_of_calories.jpg";
-import gallow from "../../assets/portfolio/gallow.png";
+import gallow from "../../assets/portfolio/gallow.jpg";
 import instagram from "../../assets/portfolio/instagram.jpg";
-import monopoly from "../../assets/portfolio/monopoly.png";
+import monopoly from "../../assets/portfolio/monopoly.jpg";
 import wallets from "../../assets/portfolio/wallets.jpg";
 import "../../../index.scss";
 

@@ -84,7 +84,13 @@ button {
 #skills,
 #services,
 #projects {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+@include respond-to-display-mobile-mini() {
+  #projects {
+    margin-bottom: 0;
+  }
 }
 
 .grid_container {

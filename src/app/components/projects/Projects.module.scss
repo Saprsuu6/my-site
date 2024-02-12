@@ -41,6 +41,13 @@ button.next {
   padding: 10px;
 }
 
+@include respond-to-display-mobile-mini() {
+  button.prev,
+  button.next {
+    display: none;
+  }
+}
+
 button.prev {
   left: 10px;
 }

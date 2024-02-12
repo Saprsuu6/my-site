@@ -44,27 +44,27 @@ const Propjects = () => {
   const [startX, setStartX] = React.useState(0);
   const [swiping, setSwiping] = React.useState(false);
 
-  const handleTouchStart = (e: TouchEvent) => {
+  const handleTouchStart: React.TouchEventHandler<HTMLDivElement> = (e) => {
     const touch = e.touches[0];
     setStartX(touch.clientX);
     setSwiping(false);
   };
 
-  const handleTouchMove = (e: TouchEvent) => {
+  const handleTouchMove: React.TouchEventHandler<HTMLDivElement> = (e) => {
     if (e.touches && e.touches.length === 1) {
       setSwiping(true);
     }
   };
 
-  const handleTouchEnd = (e: TouchEvent) => {
+  const handleTouchEnd: React.TouchEventHandler<HTMLDivElement> = (e) => {
     const touch = e.changedTouches[0];
     const endX = touch.clientX;
 
     if (swiping) {
       if (startX - endX > 50) {
-        console.log("Swipe Left");
+        toggleSlide(goToPrevious);
       } else if (endX - startX > 50) {
-        console.log("Swipe Right");
+        toggleSlide(goToNext);
       }
     }
   };
@@ -101,14 +101,13 @@ const Propjects = () => {
   return (
     <div id="projects">
       <RegionHeader title="Portfolio" subTitle="Most recent work" />
-      <div className={projectStyles.carousel}>
-        <div
-          className={projectStyles.slides}
-          onTouchStart={() => handleTouchStart}
-          onTouchMove={() => handleTouchMove}
-          onTouchEnd={() => handleTouchEnd}
-          // TODO swipe
-        >
+      <div
+        className={projectStyles.carousel}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className={projectStyles.slides}>
           <div ref={slide} className={projectStyles.slide}>
             <PortfolioItem
               backImg={portfolio[currentIndex].img}

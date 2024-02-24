@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import Services from "./components/services/Services";
 import Propjects from "./components/projects/Propjects";
 import NewPropject from "./components/newProject/NewPropject";
+import CryptosInfo from "./components/cryptosInfo/CryptosInfo";
 
 function App() {
   React.useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <Header />
+      <CryptosInfo />
       <main className={appStyles.main}>
         <Home />
         <AboutMe />

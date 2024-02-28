@@ -1,7 +1,7 @@
 import { serverBaseurl } from "./defaultService";
 
 export function getCryptos() {
-  return fetch(`${serverBaseurl}/.netlify/functions/getCrypto`, {
+  return fetch(`${serverBaseurl}/getCryptoInfo`, {
     method: "GET",
     headers: {
       Accept: "*/*",

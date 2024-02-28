@@ -18,10 +18,9 @@ const CryptosInfo = () => {
         setCryptos(res);
       })
       .catch((err) => {
-        console.log(err);
-        // err.then((errorData: any) => {
-        //   console.error(errorData);
-        // });
+        err.then((errorData: any) => {
+          console.log(errorData);
+        });
       });
   };
 

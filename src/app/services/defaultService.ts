@@ -1,1 +1,1 @@
-export const serverBaseurl = "https://saprlandserver.netlify.app";
+export const serverBaseurl = "https://server-lisa.onrender.com";

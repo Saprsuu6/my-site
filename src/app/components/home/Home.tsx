@@ -101,7 +101,7 @@ const Home = () => {
         </div>
         <a href="#aboutMe" className={homeStyles.home_scroll_button_down}>
           <div className={homeStyles.arrowDown} />
-          <span>Scroll down</span>
+          <span className={homeStyles.scroll_button_text}>Scroll down</span>
         </a>
       </div>
       <div className={homeStyles.grid_item}>
@@ -116,7 +116,7 @@ const Home = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button>Contact Me</button>
+          <button className={homeStyles.contact_me_button}>Contact Me</button>
         </a>
       </div>
     </div>

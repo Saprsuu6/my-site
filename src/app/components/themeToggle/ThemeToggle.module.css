@@ -9,7 +9,7 @@
 }
 
 .theme_switcher input:checked + .slider {
-  background-color: #4a4a4a;
+  background: transparent;
 }
 
 .slider {
@@ -18,7 +18,7 @@
   bottom: 5px;
   left: 5px;
   right: 5px;
-  background-color: #ddd;
+  background-color: transparent;
   border-radius: 20px;
   transition: background-color 0.3s;
 }

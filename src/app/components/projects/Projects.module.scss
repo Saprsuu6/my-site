@@ -7,7 +7,7 @@
   margin: 20px auto 0 auto;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
 
   @include respond-to-display-mobile-mini() {
     border-radius: 0;
@@ -35,7 +35,7 @@ button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--theme-background);
+  color: var(--theme-footer-text);
   border: none;
   cursor: pointer;
   padding: 10px;

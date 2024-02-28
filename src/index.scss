@@ -6,41 +6,31 @@ html {
 }
 
 html[data-theme="light"] {
-  --theme-header: linear-gradient(
-    to right,
-    #ff9a9e 0%,
-    #fad0c4 99%,
-    #fad0c4 100%
-  );
-  --theme-background: #ffffff;
-  --theme-font-color: #212529;
-  --theme-font-color-inverce: #ffffff;
-  --theme-font-color-side: #6c757d;
-  --theme-hover: #007bff;
-  --theme-hover-2: #0056b3;
-  --theme-hover-transient: rgba(158, 76, 0, 0.6);
-  --theme-scroll: rgb(100, 100, 100, 0.5);
-  --theme-footer: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  --theme-footer-text: #fff;
+  --theme-header: linear-gradient(to right, #215041 0%, #769372 100%);
+  --theme-background: #769372;
+  --theme-font-color: #0c2720;
+  --theme-font-color-inverce: #adc69c;
+  --theme-font-color-side: #13362a;
+  --theme-hover: #215041;
+  --theme-hover-2: #13362a;
+  --theme-hover-transient: #215041;
+  --theme-scroll: #21504170;
+  --theme-footer: #215041;
+  --theme-footer-text: #adc69c;
 }
 
 html[data-theme="dark"] {
-  --theme-header: linear-gradient(to right, #434343 0%, black 100%);
-  --theme-background: #121212;
-  --theme-font-color: #e0e0e0;
-  --theme-font-color-inverce: #121212;
-  --theme-font-color-side: #b3b3b3;
-  --theme-hover: #bb86fc;
-  --theme-hover-2: #8652ff;
-  --theme-hover-transient: rgba(158, 76, 0, 0.6);
-  --theme-scroll: rgb(100, 100, 100, 0.5);
-  --theme-footer: linear-gradient(
-    135deg,
-    #0f2027 0%,
-    #203a43 50%,
-    #2c5364 100%
-  );
-  --theme-footer-text: #fff;
+  --theme-header: linear-gradient(to right, #215041 0%, #769372 100%);
+  --theme-background: #13362a;
+  --theme-font-color: #adc69c;
+  --theme-font-color-inverce: #0c2720;
+  --theme-font-color-side: #769372;
+  --theme-hover: #215041;
+  --theme-hover-2: #13362a;
+  --theme-hover-transient: #215041;
+  --theme-scroll: #215041a2;
+  --theme-footer: #215041;
+  --theme-footer-text: #adc69c;
 }
 
 body {

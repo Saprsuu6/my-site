@@ -4,8 +4,8 @@
   display: flex;
   width: 70%;
   margin: auto;
-  box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
-  background: var(--theme-hover-2);
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+  //background: var(--theme-font-color-side);
   border-radius: 10px;
   align-items: center;
 
@@ -24,17 +24,16 @@
 .container > div:first-child h3,
 .container > div:first-child p {
   margin-bottom: 10px;
-  color: var(--theme-footer-text);
+  color: var(--theme-font-color);
 }
 
 .container > div:first-child button {
-  background: var(--theme-footer-text);
-  color: var(--theme-hover-2);
+  background: var(--theme-font-color-side);
+  color: var(--theme-font-color-inverce);
 }
 
 .container > div:first-child button:hover {
   background: var(--theme-hover);
-  color: var(--theme-footer-text);
 }
 
 .container > div:last-child {

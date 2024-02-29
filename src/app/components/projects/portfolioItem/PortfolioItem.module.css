@@ -36,6 +36,6 @@
 
 .info p,
 .info h3 {
-  color: var(--theme-footer-text);
+  color: var(--text-light);
   margin-bottom: 10px;
 }

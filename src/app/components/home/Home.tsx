@@ -116,7 +116,7 @@ const Home = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className={homeStyles.contact_me_button}>Contact Me</button>
+          <button>Contact Me</button>
         </a>
       </div>
     </div>

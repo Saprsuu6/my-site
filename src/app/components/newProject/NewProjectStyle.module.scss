@@ -27,15 +27,6 @@
   color: var(--theme-font-color);
 }
 
-.container > div:first-child button {
-  background: var(--theme-font-color-side);
-  color: var(--theme-font-color-inverce);
-}
-
-.container > div:first-child button:hover {
-  background: var(--theme-hover);
-}
-
 .container > div:last-child {
   flex: 1;
   width: 100%;

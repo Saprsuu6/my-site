@@ -6,31 +6,35 @@ html {
 }
 
 html[data-theme="light"] {
-  --theme-header: linear-gradient(to right, #215041 0%, #769372 100%);
-  --theme-background: #769372;
-  --theme-font-color: #0c2720;
-  --theme-font-color-inverce: #adc69c;
-  --theme-font-color-side: #13362a;
-  --theme-hover: #215041;
-  --theme-hover-2: #13362a;
+  --text-light: #b38a58;
+  --text-dark: #0d1f22;
+  --theme-header: linear-gradient(to right, #0d1f22 0%, #b38a58 100%);
+  --theme-background: #b38a58;
+  --theme-font-color: #0d1f22;
+  --theme-font-color-inverce: #b38a58;
+  --theme-font-color-side: #264027;
+  --theme-color-button: #6f732f;
+  --theme-hover: #3c5233;
   --theme-hover-transient: #215041;
-  --theme-scroll: #21504170;
-  --theme-footer: #215041;
-  --theme-footer-text: #adc69c;
+  --theme-scroll: #0d1f222f;
+  --theme-footer: linear-gradient(to right, #b38a58 0%, #0d1f22 100%);
+  --theme-footer-text: #0d1f22;
 }
 
 html[data-theme="dark"] {
-  --theme-header: linear-gradient(to right, #215041 0%, #769372 100%);
-  --theme-background: #13362a;
-  --theme-font-color: #adc69c;
-  --theme-font-color-inverce: #0c2720;
-  --theme-font-color-side: #769372;
-  --theme-hover: #215041;
-  --theme-hover-2: #13362a;
+  --text-light: #b38a58;
+  --text-dark: #0d1f22;
+  --theme-header: linear-gradient(to right, #0d1f22 0%, #b38a58 100%);
+  --theme-background: #0d1f22;
+  --theme-font-color: #b38a58;
+  --theme-font-color-inverce: #0d1f22;
+  --theme-font-color-side: #6f732f;
+  --theme-color-button: #264027;
+  --theme-hover: #3c5233;
   --theme-hover-transient: #215041;
-  --theme-scroll: #215041a2;
-  --theme-footer: #215041;
-  --theme-footer-text: #adc69c;
+  --theme-scroll: #b38a582c;
+  --theme-footer: linear-gradient(to right, #b38a58 0%, #0d1f22 100%);
+  --theme-footer-text: #0d1f22;
 }
 
 body {
@@ -63,10 +67,15 @@ h4 {
 button {
   border: none;
   border-radius: 10px;
-  background-color: var(--theme-hover);
-  color: var(--theme-font-color-inverce);
+  background-color: var(--theme-color-button);
+  color: var(--theme-font-color);
   padding: 13px;
   font-size: 18px;
+}
+
+button:hover {
+  background-color: var(--theme-hover);
+  color: var(--theme-font-color-inverce);
 }
 
 #home,
@@ -106,10 +115,6 @@ a,
 button,
 .skills ul li {
   transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--theme-hover-2);
 }
 
 .linkedIn:hover,
@@ -185,10 +190,10 @@ button:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--theme-hover);
+  background: var(--theme-color-button);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--theme-hover-2);
+  background: var(--theme-hover);
 }

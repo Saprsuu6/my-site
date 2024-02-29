@@ -35,7 +35,7 @@ button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--theme-footer-text);
+  color: var(--text-dark);
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -63,9 +63,15 @@ button.next:hover {
   margin-right: 10px;
 }
 
+
+button.prev,
+button.next {
+  background-color: var(--text-light);
+}
+
 button.prev:hover,
 button.next:hover {
-  background-color: var(--theme-hover-2);
+  background-color: transparent;
 }
 
 .navigation {
@@ -101,5 +107,5 @@ button.next:hover {
 }
 
 .navigation input[name="slides"]:checked + .radio_custom_label:before {
-  background-color: var(--theme-hover-2);
+  background-color: transparent;
 }

@@ -37,14 +37,21 @@ const CryptosInfo = () => {
   }, []);
 
   const formatNumbers = (num: number) => {
-    if (num.toString().includes(".")) {
-      const parts = num.toString().split(".");
-      if (parts[0].length >= 2) {
+    const numStr = num.toString();
+
+    if (numStr.includes(".")) {
+      const parts = numStr.split(".");
+      // Если число меньше единицы и имеет высокую точность после запятой
+      if (parts[0] === "0") {
+        // Оставляем первые пять значащих цифр после запятой
+        const significantDigits = parts[1].match(/^(0*[^0]{1,5})/)?.[0];
+        return `0.${significantDigits}`;
+      } else if (parts[0].length >= 2) {
         return `${parts[0]}.${parts[1].substring(0, 2)}`;
-      } else if (parts[0].length < 2) {
+      } else {
         return `${parts[0]}.${parts[1].substring(0, 4)}`;
       }
-    } else return num.toString();
+    } else return numStr;
   };
 
   const isNumNegative = (num: number) => {

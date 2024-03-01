@@ -24,3 +24,7 @@ span {
 .marquee {
   background-color: var(--text-dark);
 }
+
+.marquee h2 {
+  color: var(--text-light);
+}

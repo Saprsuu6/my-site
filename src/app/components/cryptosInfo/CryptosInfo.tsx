@@ -9,8 +9,13 @@ type CryptoInfo = {
   usd_24h_change: number;
 }[];
 
+type CryptoInfoError = {
+  message: string;
+};
+
 const CryptosInfo = () => {
   const [cryptos, setCryptos] = React.useState<CryptoInfo>([]);
+  const [error, setError] = React.useState<CryptoInfoError | null>(null);
 
   const getCryptosRemote = () => {
     getCryptos()
@@ -18,8 +23,8 @@ const CryptosInfo = () => {
         setCryptos(res);
       })
       .catch((err) => {
-        err.then((errorData: any) => {
-          console.log(errorData);
+        err.then((errorData: CryptoInfoError) => {
+          setError(errorData);
         });
       });
   };
@@ -61,24 +66,33 @@ const CryptosInfo = () => {
       play={true}
       speed={60}
     >
-      {cryptos.map((crypto, index) => (
-        <div key={index} style={{ display: "flex", alignItems: "center" }}>
-          <div className={cryptoStyles.cryptos_info_block}>
-            <h2>{crypto.name}</h2>
-            <p>${formatNumbers(crypto.usd)}</p>
-            <span
-              style={
-                isNumNegative(crypto.usd_24h_change)
-                  ? dCountNegative
-                  : dCountPositive
-              }
-            >
-              {formatNumbers(crypto.usd_24h_change)}%
-            </span>
-          </div>
+      {error ? (
+        <div style={{ padding: "5px 0" }}>
+          <h2 style={{ display: "inline", margin: "20px" }}>
+            {error?.message}
+          </h2>
           <span>&#8226;</span>
         </div>
-      ))}
+      ) : (
+        cryptos.map((crypto, index) => (
+          <div key={index} style={{ display: "flex", alignItems: "center" }}>
+            <div className={cryptoStyles.cryptos_info_block}>
+              <h2>{crypto.name}</h2>
+              <p>${formatNumbers(crypto.usd)}</p>
+              <span
+                style={
+                  isNumNegative(crypto.usd_24h_change)
+                    ? dCountNegative
+                    : dCountPositive
+                }
+              >
+                {formatNumbers(crypto.usd_24h_change)}%
+              </span>
+            </div>
+            <span>&#8226;</span>
+          </div>
+        ))
+      )}
     </Marquee>
   );
 };

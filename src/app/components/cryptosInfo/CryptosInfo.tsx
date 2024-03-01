@@ -47,11 +47,11 @@ const CryptosInfo = () => {
   };
 
   const dCountPositive = {
-    color: "#A9FF10",
+    color: "#9CF725",
   };
 
   const dCountNegative = {
-    color: "#FF5310",
+    color: "#F72C25",
   };
 
   return (

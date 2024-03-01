@@ -1,7 +1,10 @@
 .cryptos_info_block h2,
-.cryptos_info_block p,
 span {
-  color: var(--theme-footer-text);
+  color: var(--text-light);
+}
+
+.cryptos_info_block p {
+  color: var(--theme-color-button);
 }
 
 .cryptos_info_block p,
@@ -19,5 +22,5 @@ span {
 }
 
 .marquee {
-  background-color: var(--theme-hover);
+  background-color: var(--text-dark);
 }

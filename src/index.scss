@@ -3,38 +3,33 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  --text-light: #a9e5bb;
+  --text-dark: #2d1e2f;
+  --theme-header: #f7b32b;
+  --theme-footer-text: #0d1f22;
+  --theme-footer: #f7b32b;
 }
 
 html[data-theme="light"] {
-  --text-light: #b38a58;
-  --text-dark: #0d1f22;
-  --theme-header: linear-gradient(to right, #0d1f22 0%, #b38a58 100%);
-  --theme-background: #b38a58;
-  --theme-font-color: #0d1f22;
-  --theme-font-color-inverce: #b38a58;
-  --theme-font-color-side: #264027;
-  --theme-color-button: #6f732f;
-  --theme-hover: #3c5233;
-  --theme-hover-transient: #215041;
-  --theme-scroll: #0d1f222f;
-  --theme-footer: linear-gradient(to right, #b38a58 0%, #0d1f22 100%);
-  --theme-footer-text: #0d1f22;
+  --theme-background: #a9e5bb;
+  --theme-font-color: #2d1e2f;
+  --theme-font-color-inverce: #a9e5bb;
+  --theme-font-color-side: #60222d;
+  --theme-color-button: #f7b32b;
+  --theme-hover: #fcf6b1;
+  --theme-scroll: #77777750;
 }
 
 html[data-theme="dark"] {
-  --text-light: #b38a58;
-  --text-dark: #0d1f22;
-  --theme-header: linear-gradient(to right, #0d1f22 0%, #b38a58 100%);
-  --theme-background: #0d1f22;
-  --theme-font-color: #b38a58;
-  --theme-font-color-inverce: #0d1f22;
-  --theme-font-color-side: #6f732f;
-  --theme-color-button: #264027;
-  --theme-hover: #3c5233;
-  --theme-hover-transient: #215041;
-  --theme-scroll: #b38a582c;
-  --theme-footer: linear-gradient(to right, #b38a58 0%, #0d1f22 100%);
-  --theme-footer-text: #0d1f22;
+  --theme-background: #2d1e2f;
+  --theme-font-color: #a9e5bb;
+  --theme-font-color-inverce: #2d1e2f;
+  --theme-font-color-side: #fcf6b1;
+  --theme-color-button: #f7b32b;
+  --theme-hover: #fcf6b1;
+  --theme-scroll: #77777750;
 }
 
 body {
@@ -68,14 +63,13 @@ button {
   border: none;
   border-radius: 10px;
   background-color: var(--theme-color-button);
-  color: var(--theme-font-color);
+  color: var(--text-dark);
   padding: 13px;
   font-size: 18px;
 }
 
 button:hover {
   background-color: var(--theme-hover);
-  color: var(--theme-font-color-inverce);
 }
 
 #home,
@@ -191,7 +185,6 @@ button,
 
 ::-webkit-scrollbar-thumb {
   background: var(--theme-color-button);
-  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

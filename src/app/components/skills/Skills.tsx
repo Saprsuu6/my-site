@@ -47,6 +47,7 @@ const Skills = () => {
         <ul>
           {items.map((item, index) => (
             <li
+              className={skillsStyles.pulsing}
               key={index}
               style={{ backgroundColor: style }}
               onMouseEnter={() => setStyle(getRandomColor())}

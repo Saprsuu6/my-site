@@ -24,6 +24,7 @@ const CryptosInfo = () => {
       })
       .catch((err) => {
         err.then((errorData: CryptoInfoError) => {
+          console.error(errorData);
           setError(errorData);
         });
       });

@@ -46,7 +46,8 @@
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 100%;
-  background-color: black;
+  background-color: var(--text-dark);
+  color: var(--text-light);
   text-align: center;
   border-radius: 6px;
   padding: 10px;

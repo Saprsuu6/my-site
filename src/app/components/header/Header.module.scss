@@ -123,7 +123,7 @@
       justify-content: space-around;
       position: absolute;
       left: 0;
-      bottom: -427%;
+      bottom: -235px;
       backdrop-filter: blur(10px);
       width: 100%;
       flex-direction: column;
@@ -142,7 +142,7 @@
 
   @include respond-to-display-mobile-mini() {
     ul {
-      bottom: -490%;
+      bottom: -270px;
     }
   }
 }

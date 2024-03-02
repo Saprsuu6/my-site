@@ -15,7 +15,9 @@ type CryptoInfoError = {
 
 const CryptosInfo = () => {
   const [cryptos, setCryptos] = React.useState<CryptoInfo>([]);
-  const [error, setError] = React.useState<CryptoInfoError | null>(null);
+  const [error, setError] = React.useState<CryptoInfoError>({
+    message: "Witing to load cryptos...",
+  });
 
   const getCryptosRemote = () => {
     getCryptos()
@@ -24,7 +26,6 @@ const CryptosInfo = () => {
       })
       .catch((err) => {
         err.then((errorData: CryptoInfoError) => {
-          console.error(errorData);
           setError(errorData);
         });
       });

@@ -7,6 +7,7 @@ import gallow from "../../assets/portfolio/gallow.jpg";
 import instagram from "../../assets/portfolio/instagram.jpg";
 import monopoly from "../../assets/portfolio/monopoly.jpg";
 import wallets from "../../assets/portfolio/wallets.jpg";
+import asicxchange from "../../assets/portfolio/asicxchange.png";
 import "../../../index.scss";
 
 const Propjects = () => {
@@ -35,6 +36,11 @@ const Propjects = () => {
       img: wallets,
       header: "Wallets",
       text: "This is a universal financial tool designed for convenient management of personal finances directly from your smartphone. This powerful app allows users to not only track their expenses and income, but also plan a budget, create financial goals, and analyze their financial habits with in-depth analysis and intuitive charts.",
+    },
+    {
+      img: asicxchange,
+      header: "AsicxChange",
+      text: "ASICXchange is one of the largest miner distributors, specializing in offline sales. With five years of experience in the cryptocurrency mining industry, we are working to making crypto mining accessible to all. From start to finish, we are your trusted partner for all your mining needs. ASICXchange’s handle everything from land and power solutions to hosting facilities and mining infrastructure, including transformers, containers, immersion solutions, miner sales, and parts.",
     },
   ];
 

@@ -1,7 +1,8 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import cryptoStyles from "./CryptosInfo.module.css";
-import { getCryptos } from "../../services/cryptoService";
+//import { getCryptos } from "../../services/cryptoService";
+import { getCoins } from "../../../utils/getCryptosInfo";
 
 type CryptoInfo = {
   name: string;
@@ -15,27 +16,32 @@ type CryptoInfoError = {
 
 const CryptosInfo = () => {
   const [cryptos, setCryptos] = React.useState<CryptoInfo>([]);
-  const [error, setError] = React.useState<CryptoInfoError>({
-    message: "Witing to load cryptos...",
-  });
+  // const [error, setError] = React.useState<CryptoInfoError>({
+  //   message: "Witing to load cryptos...",
+  // });
 
-  const getCryptosRemote = () => {
-    getCryptos()
-      ?.then((res: CryptoInfo) => {
-        setCryptos(res);
-      })
-      .catch((err) => {
-        err.then((errorData: CryptoInfoError) => {
-          setError(errorData);
-        });
-      });
-  };
+  // const getCryptosRemote = () => {
+  //   getCryptos()
+  //     ?.then((res: CryptoInfo) => {
+  //       setCryptos(res);
+  //     })
+  //     .catch((err) => {
+  //       err.then((errorData: CryptoInfoError) => {
+  //         setError(errorData);
+  //       });
+  //     });
+  // };
 
   React.useEffect(() => {
-    getCryptosRemote();
+    //getCryptosRemote();
+    //const interval = setInterval(getCryptosRemote, 1 * 60 * 1000);
+    //return () => clearInterval(interval);
 
-    const interval = setInterval(getCryptosRemote, 1 * 60 * 1000);
-    return () => clearInterval(interval);
+    getCoins()
+      .then((coins: CryptoInfo) => {
+        setCryptos(coins);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   const formatNumbers = (num: number) => {
@@ -69,17 +75,10 @@ const CryptosInfo = () => {
   };
 
   return (
-    <Marquee
-      className={cryptoStyles.marquee}
-      autoFill={true}
-      play={true}
-      speed={60}
-    >
-      {error ? (
+    <Marquee className={cryptoStyles.marquee} autoFill={true} play={true} speed={60}>
+      {/* {error ? (
         <div style={{ padding: "5px 0" }}>
-          <h2 style={{ display: "inline", margin: "20px" }}>
-            {error?.message}
-          </h2>
+          <h2 style={{ display: "inline", margin: "20px" }}>{error?.message}</h2>
           <span>&#8226;</span>
         </div>
       ) : (
@@ -88,20 +87,26 @@ const CryptosInfo = () => {
             <div className={cryptoStyles.cryptos_info_block}>
               <h2>{crypto.name}</h2>
               <p>${formatNumbers(crypto.usd)}</p>
-              <span
-                style={
-                  isNumNegative(crypto.usd_24h_change)
-                    ? dCountNegative
-                    : dCountPositive
-                }
-              >
+              <span style={isNumNegative(crypto.usd_24h_change) ? dCountNegative : dCountPositive}>
                 {formatNumbers(crypto.usd_24h_change)}%
               </span>
             </div>
             <span>&#8226;</span>
           </div>
         ))
-      )}
+      )} */}
+      {cryptos.map((crypto, index) => (
+        <div key={index} style={{ display: "flex", alignItems: "center" }}>
+          <div className={cryptoStyles.cryptos_info_block}>
+            <h2>{crypto.name}</h2>
+            <p>${formatNumbers(crypto.usd)}</p>
+            <span style={isNumNegative(crypto.usd_24h_change) ? dCountNegative : dCountPositive}>
+              {formatNumbers(crypto.usd_24h_change)}%
+            </span>
+          </div>
+          <span>&#8226;</span>
+        </div>
+      ))}
     </Marquee>
   );
 };

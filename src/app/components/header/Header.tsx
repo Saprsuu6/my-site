@@ -1,22 +1,20 @@
-import React from "react";
-import { useTheme } from "../hooks/useTheme";
-
 import "../../../index.scss";
+
+import React from "react";
 import headerStyles from "./Header.module.scss";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 
-const Header = () => {
-  const [setTheme] = useTheme();
+interface Props {
+  toggleTheme: (value: string) => void;
+}
 
+const Header: React.FC<Props> = ({ toggleTheme }) => {
   const [isVisibleDropMenu, setIsVisibleDropMenu] = React.useState(false);
 
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.text_container}>
-        <div
-          className={headerStyles.menu}
-          onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
-        />
+        <div className={headerStyles.menu} onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)} />
         <div className={`${headerStyles.logo} logo`}>
           <a href="#home">Home</a>
         </div>
@@ -25,53 +23,34 @@ const Header = () => {
         </div>
       </div>
       <nav className={`${headerStyles.navbar} navbar`}>
-        <ul
-          className={
-            isVisibleDropMenu ? headerStyles.visible : headerStyles.invisible
-          }
-        >
+        <ul className={isVisibleDropMenu ? headerStyles.visible : headerStyles.invisible}>
           <li>
-            <a
-              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
-              href="#aboutMe"
-            >
+            <a onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)} href="#aboutMe">
               About
             </a>
           </li>
           <li>
-            <a
-              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
-              href="#skills"
-            >
+            <a onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)} href="#skills">
               Skills
             </a>
           </li>
           <li>
-            <a
-              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
-              href="#services"
-            >
+            <a onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)} href="#services">
               Services
             </a>
           </li>
           <li>
-            <a
-              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
-              href="#projects"
-            >
+            <a onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)} href="#projects">
               Projects
             </a>
           </li>
           <li>
-            <a
-              onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)}
-              href="#hireMe"
-            >
+            <a onClick={() => setIsVisibleDropMenu(!isVisibleDropMenu)} href="#hireMe">
               Hire me
             </a>
           </li>
           <li>
-            <ThemeToggle setTheme={setTheme} />
+            <ThemeToggle setTheme={toggleTheme} />
           </li>
         </ul>
       </nav>

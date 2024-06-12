@@ -18,12 +18,7 @@ const ThemeToggle: React.FC<Props> = ({ setTheme }) => {
 
   return (
     <label className={themeToggleStyles.theme_switcher}>
-      <input
-        type="checkbox"
-        id="theme-checkbox"
-        onChange={toggleTheme}
-        hidden
-      />
+      <input type="checkbox" id="theme-checkbox" onChange={toggleTheme} hidden />
       <div className={themeToggleStyles.slider}>
         <div className={themeToggleStyles.icons}>
           <span className={themeToggleStyles.sun}>☀️</span>
